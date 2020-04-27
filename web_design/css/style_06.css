@@ -1,0 +1,136 @@
+body{
+  background-color: #a6a6a6;
+  width: 75%;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+header{
+    height: 500px;
+    width: 100%;
+    background-image: url(../images/bg-3.jpg);
+    background-position: right center;
+    background-size: cover;    
+}
+
+nav ul{
+  padding: 10px;
+  text-align: right;
+}
+
+nav li{
+  display: inline-block;
+  border: solid 1px #FFF;
+  list-style-type: none;
+  margin: 5px;
+}
+
+nav li a{
+    background-color: rgba(0,0,0, 0.3);
+    color: #FFF;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+nav li a:hover{
+    background-color: rgba(0,0,0, 0.5);
+}
+
+
+#divtitulo{
+    text-align: center;
+    color: #FFF;
+}
+
+#divtitulo h1{
+    text-transform: uppercase;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 50px;
+    text-shadow: 3px 3px 2px #333;
+}
+
+#divtitulo p{
+    margin: auto;
+    width: 50%;
+    background-color: grey;
+}
+
+main{
+    width: 80%;
+    margin: auto;
+}
+
+
+#section1{
+    background-color: #FFF;
+    padding: 10px;
+    margin-top: 15px;
+    overflow: auto;
+}
+
+.card{
+    width: 32%;
+    float: left;
+    box-sizing: border-box;
+    background-color: aqua;
+    margin-left: 1%;
+}
+
+.card img{
+    width: 100%;
+    display: block;
+}
+
+.card p{
+    display: block;
+    background-color: gray;
+    margin: 0;
+    color: #FFF;
+    padding: 15px;
+    font-size: 13px;
+    text-align: left;
+    text-indent: 7px;
+}
+
+#section2{
+    background-color: #FFF;;
+    margin: 10px auto;
+    height: 40%;
+    padding: 8px 0px;
+}
+
+h3{
+    background-color: #FAB400;
+    border-bottom-color: #23F0EE;
+    border-bottom-style: outset;
+    border-bottom-width: 2px;
+    padding: 8px 8px;
+    margin: auto;
+    width: 90%;
+}
+
+.ps{
+    width: 90%;
+    height: 10%;
+    padding: 8px 8px;
+    margin: auto;
+    padding-left: 0;
+}
+
+
+footer{
+    background-color: #595959;
+    height: 40px;
+    line-height: 40px;
+}
+
+footer p{
+
+  text-align: center;
+  color: #FFF;
+  width: 100%;
+  text-shadow: black 1px 2px;
+}

@@ -1,0 +1,27 @@
+body{
+    font-family: sans-serif;
+}
+
+table{
+    border-collapse: collapse;
+    width: 80%;
+    margin: 40px auto;
+    background: beige;
+    border: 3px solid rgba(0,80,30,1);
+}
+
+th{
+    background-color: #2ae0cb;
+    border: 3px solid rgba(0,80,30,1);
+    padding: 20px;
+}
+
+td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+caption{
+    font-weight: bold;
+}

@@ -1,0 +1,39 @@
+body{
+  width: 80%;
+  margin:auto;
+  font-family: Verdana, helvetica, sans-serif;
+  color: #444;
+}
+
+h1{
+  background-color: #ffbf80;
+  text-align: center;
+  color: #994d00;
+}
+
+h2{
+  background-color: #e59a9a;
+  border-bottom-color: #ff1a1a;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  color: #ff1a1a;
+  /* text-indent: 0.4em; */
+  padding: 10px;
+}
+
+ul{
+  padding-left: 0;
+}
+
+li{
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}

@@ -1,0 +1,28 @@
+body{
+  font-family: monospace;
+}
+
+a{
+  color: green;
+}
+
+a:hover{
+    color: #ff0066;
+}
+
+a:visited{
+    color: #990099;
+}
+
+li{
+    list-style: circle;      /* eh a bolinha ao lado da lista */
+}
+
+ol li{
+    list-style:lower-alpha;
+    list-style-position: inside;
+}
+
+
+
+

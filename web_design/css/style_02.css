@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
+h1 {
+    background-color: #EF4980;
+    background-position: center;
+    letter-spacing: 10px;
+    height: 100px;
+    word-spacing: 20px;
+}
+
+
+p {
+    color: #008080;
+    background-color: #FFE4C4;
+    font-size: 17px;
+    margin: 20px 10px 20px 10px;
+    padding: 10px 5px 10px 5px;
+    border-style: double;
+    border-color:deepskyblue;
+    border-width: 8px;
+}
+
+
+
+h2 {
+    font-weight: 100;
+    background-color: #385;
+    color: #FFF;
+    border-bottom-style: dotted;
+    border-bottom-color: darkblue;
+    border-bottom-width: 6px;
+}

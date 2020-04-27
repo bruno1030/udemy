@@ -1,0 +1,13 @@
+body{
+    font-family: Lucida Sans Unicode, sans-serif;
+    margin: 30px auto;
+    width: 85%;
+}
+
+h1{
+    text-align: center;
+    border-top: 4px solid #0c1641;
+    border-bottom: 4px solid #0c1641;
+    background-color: rgba(0, 235, 255, 0.2);
+    font-size: 23px;
+}
