@@ -1,0 +1,29 @@
+body{
+    margin: 20px 40px 30px 20px;
+    font-family: tahoma;
+    width: 70%;
+}
+
+legend{
+    color: rgba(0,100,200,1);
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+label, input{
+    display: block;
+}
+
+label{
+    margin-top: 20px;
+}
+
+input[type=submit], input[type=reset], input[type=button]{
+    width: 90px;
+    height: 40px;
+    display: inline-block;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
