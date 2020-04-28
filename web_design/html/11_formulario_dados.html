@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Formulario de dados">
+      <link rel="stylesheet" href="../css/style_11.css">
+    <title>== LOGIN ==</title>
+  </head>
+  <body>
+    <h1>DADOS PESSOAIS</h1>
+    
+    <form>
+      
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            
+            <label for="email">Email</label>
+            <input type="email" name="email">
+            
+            <label for="filhos">Número de filhos</label>
+            <input type="number" value="filhos" name="filhos">
+            
+            <label for="nascimento">Nascimento</label>
+            <input type="date" value="nascimento" name="nascimento">
+            
+            <p>Sexo</p>
+            
+            <label for="masculino"><input type="radio" value="masculino" name="sexo">Masculino</label>
+            <label for="feminino"><input type="radio" value="feminino" name="sexo">Feminino</label>
+            
+            <label for="estado">Estado</label>
+            <select name="estado">
+                <option value="0">Selecione</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </select>
+        </fieldset> 
+        
+        <fieldset>
+            <legend>Área de interesse</legend>
+            
+            <label for="html"><input type="checkbox" name="html">HTML</label>
+            <label for="css"><input type="checkbox" name="css">CSS</label>
+            <label for="javascript"><input type="checkbox" name="javascript">Javascript</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea name="msg"></textarea>
+        </fieldset>
+        
+        <input type="submit" value="mandar">
+        <input type="reset" value="resetar">
+        <input type="button" value="button">
+      
+    </form>
+
+      
+  </body>
+</html>
