@@ -1,0 +1,34 @@
+#check{
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+}
+
+#check:checked{
+    width: 50px;
+    height: 50px;
+}
+
+button:disabled{
+    background: blue;
+}
+
+p{
+    color: red;
+}
+
+p:empty:before{
+    content: "paragrafo vazio nada, ne!"
+}
+
+input[type="text"]:focus{
+    background-color: #ccc;
+}
+
+a:focus, a:hover{
+    background-color: red;
+}
+
+input::placeholder{
+    color: green;
+}
