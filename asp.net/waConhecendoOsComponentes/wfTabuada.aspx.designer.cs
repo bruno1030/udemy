@@ -11,7 +11,7 @@ namespace waConhecendoOsComponentes
 {
 
 
-    public partial class wfComponentes1
+    public partial class wfTabuada
     {
 
         /// <summary>
@@ -24,57 +24,30 @@ namespace waConhecendoOsComponentes
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle txtSite.
+        /// Controle dlNumbers.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSite;
+        protected global::System.Web.UI.WebControls.DropDownList dlNumbers;
 
         /// <summary>
-        /// Controle txtEndereco.
+        /// Controle btnExecutar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEndereco;
+        protected global::System.Web.UI.WebControls.Button btnExecutar;
 
         /// <summary>
-        /// Controle btnInserir.
+        /// Controle lbDados.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInserir;
-
-        /// <summary>
-        /// Controle btnSelecionar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSelecionar;
-
-        /// <summary>
-        /// Controle dlSite.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dlSite;
-
-        /// <summary>
-        /// Controle lbEndereco.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbEndereco;
+        protected global::System.Web.UI.WebControls.ListBox lbDados;
     }
 }

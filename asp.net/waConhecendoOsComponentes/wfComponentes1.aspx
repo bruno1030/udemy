@@ -10,6 +10,9 @@
         .auto-style1 {
             width: 293px;
         }
+        .auto-style2 {
+            width: 190px;
+        }
     </style>
 </head>
 <body>
@@ -20,7 +23,7 @@
                 <tr>
                     <td class="auto-style1">Site</td>
                     <td>Endereco</td>
-                    <td>Opcoes</td>
+                    <td class="auto-style2">Opcoes</td>
                 </tr>
                 <tr>
                     <td class="auto-style1">
@@ -29,8 +32,9 @@
                     <td>
                         <asp:TextBox ID="txtEndereco" runat="server" Width="300px"></asp:TextBox>
                     </td>
-                    <td>
+                    <td class="auto-style2">
                         <asp:Button ID="btnInserir" runat="server" Text="Inserir Site" OnClick="btnInserir_Click" />
+                        <asp:Button ID="btnSelecionar" runat="server" OnClick="btnSelecionar_Click" Text="Selecionar" Width="80px" />
                     </td>
                 </tr>
                 <tr>
@@ -40,13 +44,17 @@
                             <asp:ListItem>globo esporte</asp:ListItem>
                         </asp:DropDownList>
                     </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:ListBox ID="lbEndereco" runat="server" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged">
+                            <asp:ListItem>http://www.uol.com.br</asp:ListItem>
+                        </asp:ListBox>
+                    </td>
+                    <td class="auto-style2">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style1">&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
                 </tr>
             </table>
         </div>

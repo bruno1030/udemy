@@ -17,8 +17,27 @@ namespace waConhecendoOsComponentes
         protected void btnInserir_Click(object sender, EventArgs e)
         {
             //dlSite.Items.Add(txtSite.Text);
-            ListItem item = new ListItem();
-            dlSite.Items.Add(List)
+            ListItem item = new ListItem(txtSite.Text, dlSite.Items.Count.ToString());
+            dlSite.Items.Add(item);
+            txtSite.Text = "";
+
+            item = new ListItem(txtEndereco.Text, lbEndereco.Items.Count.ToString());
+            lbEndereco.Items.Add(item);
+            txtEndereco.Text = "";
+
+        }
+
+        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnSelecionar_Click(object sender, EventArgs e)
+        {
+            ListItem item = dlSite.SelectedItem;
+            txtSite.Text = item.Text;
+            item = lbEndereco.SelectedItem;
+            txtEndereco.Text = item.Text;
         }
     }
 }
