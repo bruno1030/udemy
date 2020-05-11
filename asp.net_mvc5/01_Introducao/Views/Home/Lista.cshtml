@@ -1,0 +1,24 @@
+﻿
+
+@{
+    @Model
+    ViewBag.Title = "Lista";
+
+}
+
+<h2>Listar (utilizando ViewBag), trazendo o que foi digitado no formulario</h2>
+
+
+<div>
+    <b>Pessoa Id: @Model.PessoaId</b>
+</div>
+<div>
+    <b>Nome: @Model.Nome</b>
+</div>
+<div>
+    <b>Tipo: @Model.Tipo</b>
+</div>
+
+<br />
+
+@Html.ActionLink("Voltar", "Index", "Home")

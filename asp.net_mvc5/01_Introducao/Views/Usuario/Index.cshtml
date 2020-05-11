@@ -1,0 +1,19 @@
+﻿@Model 01_Introducao.Models.Usuario
+
+@{
+    ViewBag.Title = "Usuario";
+}
+    
+<h2>Usuario</h2>
+
+<br />
+
+<h3>Validacao de usuarios:</h3>
+<form action="/Usuario/Resultado" method="get">
+    <div class="form-group">
+        <label for="Nome"></label>
+        <input for="Nome" class="form-control" />
+        @*<span asp-validation-for="Nome" class="text-danger"></span>*@
+    </div>
+    <input type="submit" name="btnValidarUsuario" value="Validar" />
+</form>

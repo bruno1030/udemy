@@ -1,0 +1,96 @@
+﻿@Model 01_Introducao.Models.Pessoa
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Curso de ASP MVC</h2>
+<p>Curso com Hugo Vasconcelos</p>
+
+<br />
+<br />
+
+<h3>Dados da Pessoa (com ViewData)</h3>
+<br />
+<br />
+
+<p>ID: @ViewData["PessoaId"] </p>
+<br />
+<p>Nome: @ViewData["Nome"] </p>
+<br />
+<p>Tipo: @ViewData["Tipo"] </p>
+<br />
+
+
+
+<br />
+<br />
+
+
+<h3>Dados da Pessoa (com ViewBag)</h3>
+<br />
+<br />
+
+<p>ID: @ViewBag.PessoaId</p>
+<p>Nome: @ViewBag.Nome</p>
+<p>Tipo: @ViewBag.Tipo</p>
+<br />
+
+<br />
+<br />
+
+
+<h3>Dados da Pessoa (trazendo direto da Model - view tipada)</h3>
+<br />
+<br />
+
+<p>ID: @Model.PessoaId</p>
+<p>Nome: @Model.Nome</p>
+<p>Tipo: @Model.Tipo</p>
+<br />
+
+<br />
+<br />
+
+
+<h3>Dados da Pessoa (utilizando formulario e view tipada)</h3>
+<br />
+<br />
+
+
+<form action="Home/Lista" method="post">
+    @* nesse caso eh metodo post (que corresponde ao metodo set) pois eu estou enviando informacao. Senao era get *@
+    <fieldset>
+        <legend>Informacoes de Pessoas</legend>
+
+
+        <div>
+            <label for="PessoaId">Id</label>
+        </div>
+        <div>
+            <input type="number" name="pessoaId" value="@Model.PessoaId" />
+        </div>
+
+        <div>
+            <label for="Nome" Nome></label>
+        </div>
+        <div>
+            <input type="text" name="nome" value="@Model.Nome" />
+        </div>
+
+        <div>
+            <label for="Tipo">Tipo</label>
+        </div>
+        <div>
+            <input type="text" name="tipo" value="@Model.Tipo" />
+        </div>
+
+        <input type="submit" value="Enviar" />
+
+    </fieldset>
+</form>
+
+<br />
+<br />
+
+
