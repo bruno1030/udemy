@@ -11,7 +11,7 @@ namespace _01_Introducao.Controllers
     public class UsuarioController : Controller
     {
         // GET: Usuario
-        public ActionResult Index()
+        public ActionResult Cadastrar()
         {
             var usuario = new Usuario();
             return View(usuario);
@@ -22,12 +22,22 @@ namespace _01_Introducao.Controllers
         public ActionResult Cadastrar(Usuario usuario)
         {
 
+            if (string.IsNullOrEmpty(usuario.Nome))
+            {
+                ModelState.AddModelError("Nome", "O campo nome eh obrigatorio");
+            }
+
+            if(usuario.Senha != usuario.ConfirmarSenha)
+            {
+                ModelState.AddModelError("", "As senhas nao conferem");
+            }
+
             if (ModelState.IsValid)     // se tiver validado corretamente o usuario       
             {
-                TempData["msg"] = "Cadastrado!";
-                return RedirectToAction("Listar", usuario);       //retornara o metodo "Resultado"
+                //TempData["msg"] = "Cadastrado!";
+                return View("Listar", usuario);       //retornara o metodo "Resultado"
             }
-            return RedirectToAction("Index");
+            return View(usuario);
         }
         
 
