@@ -15,6 +15,7 @@ namespace _01_Introducao.Controllers                      // .. namespace
         // GET: Home                                     
         public ActionResult Index()              //esse funcao se chama Index, , do tipo ActionResult, e retorna uma View
         {
+            
             var pessoa = new Pessoa
             {
                 PessoaId = 1,
@@ -31,6 +32,7 @@ namespace _01_Introducao.Controllers                      // .. namespace
             ViewBag.tipo = pessoa.Tipo;
 
             return View(pessoa);           // o parametro ali dentro significa que a variavel "pessoa" sera enviada para a View quando ela for carregada
+        
         }
 
         public ActionResult Contato()

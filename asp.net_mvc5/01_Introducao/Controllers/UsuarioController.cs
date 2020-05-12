@@ -17,21 +17,25 @@ namespace _01_Introducao.Controllers
             return View(usuario);
         }
 
-        /*
-        [HttpPost]
-        public ActionResult Usuario(Usuario usuario)
-        {
-            if (ModelState.IsValid)         // se tiver validado corretamente o usuario
-            //{
-             //   return View("Resultado", usuario);       //retornara o metodo "Resultado"
-            //}
-            return View(usuario);
-        }
-        */
 
-        public ActionResult Resultado()
+        [HttpPost]
+        public ActionResult Cadastrar(Usuario usuario)
+        {
+
+            if (ModelState.IsValid)     // se tiver validado corretamente o usuario       
+            {
+                TempData["msg"] = "Cadastrado!";
+                return RedirectToAction("Listar", usuario);       //retornara o metodo "Resultado"
+            }
+            return RedirectToAction("Index");
+        }
+        
+
+        [HttpGet]
+        public ActionResult Listar()
         {
             return View();
         }
+        
     }
 }

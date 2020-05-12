@@ -169,7 +169,7 @@
     <Content Include="Views\Home\Sobre.cshtml" />
     <Content Include="Views\Home\Lista.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
-    <Content Include="Views\Usuario\Resultado.cshtml" />
+    <Content Include="Views\Usuario\Listar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
