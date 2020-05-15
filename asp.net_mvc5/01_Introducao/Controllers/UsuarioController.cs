@@ -22,15 +22,15 @@ namespace _01_Introducao.Controllers
         public ActionResult Cadastrar(Usuario usuario)
         {
 
-            if (string.IsNullOrEmpty(usuario.Nome))
-            {
-                ModelState.AddModelError("Nome", "O campo nome eh obrigatorio");
-            }
+            //if (string.IsNullOrEmpty(usuario.Nome))
+            //{
+            //    ModelState.AddModelError("Nome", "O campo nome eh obrigatorio");
+            //}
 
-            if(usuario.Senha != usuario.ConfirmarSenha)
-            {
-                ModelState.AddModelError("", "As senhas nao conferem");
-            }
+            //if (usuario.Senha != usuario.ConfirmarSenha)
+            //{
+            //    ModelState.AddModelError("", "As senhas nao conferem");
+            //}
 
             if (ModelState.IsValid)     // se tiver validado corretamente o usuario       
             {
@@ -39,13 +39,13 @@ namespace _01_Introducao.Controllers
             }
             return View(usuario);
         }
-        
+
 
         [HttpGet]
         public ActionResult Listar()
         {
             return View();
         }
-        
+
     }
 }
