@@ -17,10 +17,10 @@ namespace _01_Introducao.Models
         [Range(18,70, ErrorMessage = "A idade tem que estar entre 18 e 70 anos")]
         public int Idade { get; set; }
 
-        //[RegularExpression(@"^([a-z][a-z0-9]*[.][a-z][a-z0-9]*@march[.]com)$", ErrorMessage="Digite um email valido")]
+        [RegularExpression(@"\s*\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*", ErrorMessage="Digite um email valido")]
         public string Email { get; set; }
 
-        //[RegularExpression(@"[a-zA-Z]{5,15}", ErrorMessage = "Somente Letras e de 5 a 15 caracteres!")]
+        [RegularExpression(@"[a-zA-Z]{5,15}", ErrorMessage = "Somente Letras e de 5 a 15 caracteres!")]
         [Required(ErrorMessage = "O login deve ser preenchido.")]
         public string Login { get; set; }
 
