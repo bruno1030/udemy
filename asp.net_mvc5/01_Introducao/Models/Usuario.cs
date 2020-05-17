@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace _01_Introducao.Models
 {
@@ -22,12 +23,13 @@ namespace _01_Introducao.Models
 
         [RegularExpression(@"[a-zA-Z]{5,15}", ErrorMessage = "Somente Letras e de 5 a 15 caracteres!")]
         [Required(ErrorMessage = "O login deve ser preenchido.")]
+        [Remote("LoginUnico", "Usuario", ErrorMessage = "Este login ja existe")] // primeiro parametro eh a funcao que sera acessada, depois o nome da controller onde esta aquele metodo, e depois a mensagem que sera apresentada em caso de erro
         public string Login { get; set; }
 
         [Required(ErrorMessage = "Senha eh obrigatoria")]
         public string Senha { get; set; }
 
-        [Compare("Senha", ErrorMessage = "As senhas nao conferem")]
+        [System.ComponentModel.DataAnnotations.Compare("Senha", ErrorMessage = "As senhas nao conferem")]
         public string ConfirmarSenha { get; set; }
 
     }

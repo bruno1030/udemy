@@ -2,6 +2,7 @@
 using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -47,5 +48,17 @@ namespace _01_Introducao.Controllers
             return View();
         }
 
+        public ActionResult LoginUnico(string login)
+        {
+            var bdExemplo = new Collection<string>
+            {
+                "loginBruno",
+                "loginGuga",
+                "loginLucas"
+            };
+
+            // aqui abaixo ele verifica se o login digitado pelo usuario eh diferente do que ja tem no banco de dados. Pra isso, ele transforma tudo em minusculo, tanto os que estao no banco de dados, como o que esta sendo digitado pelo usuario
+            return Json(bdExemplo.All(x => x.ToLower() != login.ToLower()), JsonRequestBehavior.AllowGet);
+        }
     }
 }
