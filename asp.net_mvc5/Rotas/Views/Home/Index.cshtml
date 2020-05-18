@@ -8,13 +8,38 @@
 
 <div>
     <ul>
-        @foreach(var item in Model)
+        @foreach (string item in ViewBag.Categorias)
         {
             <li>
-                @Html.ActionLink(item.Titulo), "Mostrar noticia", "Home", new{
-                    
-                }
+                @Html.ActionLink(item, "Mostrar categoria", "Home", new
+                {
+                    @categoria = item
+                }, null)
             </li>
         }
     </ul>
+</div>
+
+<div>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li>
+                @Html.ActionLink(item.Titulo, "Mostrar noticia", "Home", new
+           {
+               @noticiaId = item.NoticiaId,
+               @categoria = item.Categoria.ToLower(),
+               @titulo = item.Titulo.ToLower()
+           }, null);
+
+                <em>@Html.DisplayFor(modelItem => item.Categoria)</em>
+                <b>@Html.DisplayFor(modelItem => item.Data)</b>
+
+            </li>
+        }
+    </ul>
+</div>
+
+<div>
+    @Html.ActionLink("Clique para ver todas as noticias", "Todas as noticias", "Home")
 </div>
