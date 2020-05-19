@@ -2,17 +2,17 @@
 
 
 @{
-    ViewBag.Title = "TodasAsNoticias";
+    ViewBag.Title = "Categoria";
 }
 
-<h2>TodasAsNoticias</h2>
+<h2>Categoria: @ViewBag.Categoria</h2>
 
 <div>
     <ul>
         @foreach (var item in Model)
         {
             <li>
-                @Html.ActionLink(item.Titulo, "MostraNoticia", "Home", new{@categoria = item}, null);
+                @Html.ActionLink(item.Categoria, "MostraCategoria", "Home", new { @categoria = item }, null);
 
                 <em>@Html.DisplayFor(modelItem => item.Categoria)</em>
                 <b>@Html.DisplayFor(modelItem => item.Data)</b>

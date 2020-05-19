@@ -39,7 +39,8 @@ namespace Rotas.Controllers
         public ActionResult MostraCategoria(string categoria)
         {
             var categoriaEspecifica = todasAsNoticias.Where(x => x.Categoria.ToLower() == categoria.ToLower()).ToList();        //esse   "x => x.Categoria"   significa que o parametro x recebe x.Categoria.....  a Categoria com letra maiuscula eh o que esta no banco de dados, e o categoria com c minusculo eh o parametro que estamos passando
-
+            ViewBag.Categoria = categoria;
+            return View(categoriaEspecifica);
         }
 
 

@@ -11,7 +11,7 @@
         @foreach (string item in ViewBag.Categorias)
         {
             <li>
-                @Html.ActionLink(item, "Mostrar categoria", "Home", new
+                @Html.ActionLink(item, "MostraCategoria", "Home", new
                 {
                     @categoria = item
                 }, null)
@@ -25,7 +25,7 @@
         @foreach(var item in Model)
         {
             <li>
-                @Html.ActionLink(item.Titulo, "Mostrar noticia", "Home", new
+                @Html.ActionLink(item.Titulo, "MostraNoticia", "Home", new
            {
                @noticiaId = item.NoticiaId,
                @categoria = item.Categoria.ToLower(),
@@ -41,5 +41,5 @@
 </div>
 
 <div>
-    @Html.ActionLink("Clique para ver todas as noticias", "Todas as noticias", "Home")
+    @Html.ActionLink("Clique para ver todas as noticias", "TodasAsNoticias", "Home")
 </div>
