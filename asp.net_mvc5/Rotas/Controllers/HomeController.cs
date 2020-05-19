@@ -26,6 +26,23 @@ namespace Rotas.Controllers
             return View(ultimasNoticias);
         }
 
+        public ActionResult TodasAsNoticias()
+        {
+            return View(todasAsNoticias);
+        }
+
+        public ActionResult MostraNoticia(int noticiaId, string titulo, string categoria)
+        {
+            return View(todasAsNoticias.FirstOrDefault(x => x.NoticiaId == noticiaId));
+        }
+
+        public ActionResult MostraCategoria(string categoria)
+        {
+            var categoriaEspecifica = todasAsNoticias.Where(x => x.Categoria.ToLower() == categoria.ToLower()).ToList();        //esse   "x => x.Categoria"   significa que o parametro x recebe x.Categoria.....  a Categoria com letra maiuscula eh o que esta no banco de dados, e o categoria com c minusculo eh o parametro que estamos passando
+
+        }
+
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
