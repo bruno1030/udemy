@@ -1,5 +1,6 @@
 ﻿
 var comum = comum || {
+
 };
 
-comum.nome = "Bruno Martins";
+comum.nome = "Exemplo de JS";

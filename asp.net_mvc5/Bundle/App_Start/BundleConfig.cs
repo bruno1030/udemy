@@ -14,7 +14,17 @@ namespace Bundle
             // e o que essa linha abaixo faz eh habilitar esse meu arquivo Bundle
             // Ou seja, permito que ele pegue todos os registros abaixo,
             // essas referencias abaixo, e compacte isso dentro da minha aplicacao
-            BundleTable.EnableOptimizations = true; 
+            BundleTable.EnableOptimizations = true;
+
+            bundles.Add(new ScriptBundle("~/comum").IncludeDirectory("~/Scripts/comum", "*.js", true)); // esse true significa que alem de pegar todos os JS dentro do diretorio Scripts/comum, eu quero ainda que pegue os js que estiverem dentro de outras pastas dentro deste diretorio tambem
+
+            bundles.IgnoreList.Ignore("*.dbg.js");
+
+            var ordem = new BundleFileSetOrdering("meuScript");
+            ordem.Files.Add("setup.js");
+            ordem.Files.Add("display.js");
+            bundles.FileSetOrderList.Insert(0, ordem);
+
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
