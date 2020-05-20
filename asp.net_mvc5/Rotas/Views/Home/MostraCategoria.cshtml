@@ -12,9 +12,8 @@
         @foreach (var item in Model)
         {
             <li>
-                @Html.ActionLink(item.Categoria, "MostraCategoria", "Home", new { @categoria = item }, null);
+                @Html.ActionLink(item.Titulo, "MostraNoticia", "Home", new { @noticiaId = item.NoticiaId, @titulo = item.Titulo, @categoria = item.Categoria }, null);
 
-                <em>@Html.DisplayFor(modelItem => item.Categoria)</em>
                 <b>@Html.DisplayFor(modelItem => item.Data)</b>
             </li>
         }

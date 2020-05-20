@@ -14,6 +14,24 @@ namespace Rotas
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Todas as noticias",
+                url: "noticias/",
+                defaults: new {controller = "Home", action="TodasAsNoticias"}
+            );
+
+            routes.MapRoute(
+                name: "Todas as noticias de uma categoria",
+                url: "noticias/{categoria}/",
+                defaults: new {controller = "Home", action="MostraCategoria"}
+            );
+
+            routes.MapRoute(
+                name: "Mostrar noticia",
+                url: "noticias/{categoria}/{titulo}-{noticiaId}/",
+                defaults: new {controller = "Home", action = "MostraNoticia"}
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
